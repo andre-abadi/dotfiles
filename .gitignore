@@ -1,11 +1,9 @@
-# Ignore Everything
-
+# Ignore everything
 *
-
-# Don't ignore the following
-
+# Except the following
 !.gitignore
 !.gitconfig
 !.vimrc
 !.bash_profile
 !.bashrc
+!.README
