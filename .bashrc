@@ -1,15 +1,25 @@
 # system aliases
 alias tmux="tmux attach || tmux"
+
 # docker aliases
 alias up='docker-compose up -d'
 alias down='docker-compose down'
 alias pull='docker-compose pull'
 cli () { docker exec -it ${PWD##*/} /bin/bash ; }
 logs () { docker logs --follow ${PWD##*/} ; }
+
 # SSH aliases
 alias osiris="ssh eagle@10.1.1.140"
 alias persephone="ssh -p1339 admin@10.1.1.150"
 alias pihole="ssh pi@10.1.1.200"
+
+if [[ $platform == 'linux' ]]; then
+   alias ls='ls --color=auto'
+elif [[ $platform == 'freebsd' ]]; then
+   alias ls='ls -G'
+fi
+
+
 #
 # automatically connect to Tmux if SSH and check for existing sessions
 #
