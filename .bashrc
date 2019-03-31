@@ -1,9 +1,6 @@
+# https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 # https://stackoverflow.com/a/40192494
-if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-    tmux attach-session -t SSH || tmux new-session -s SSH
-fi
-
-
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
 
 export TERM=xterm-256color
 
