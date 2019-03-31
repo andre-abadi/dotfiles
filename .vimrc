@@ -8,10 +8,11 @@ set showcmd             " show incomplete cmds down the bottom
 set showmode            " show current mode down the bottom
 filetype plugin on      " enable filetype plugin
 filetype indent on      " enable indent plugin
+set mouse=a             " https://superuser.com/a/826240
 " Tabs
-set shiftwidth=4        " set a <TAB> key-press equal to X spaces
+set shiftwidth=2        " set a <TAB> key-press equal to X spaces
 set tabstop=2						" number of visual spaces per TAB
-set softtabstop=4		    " number of spaces in tab when editing
+set softtabstop=2		    " number of spaces in tab when editing
 set expandtab						" tabs are spaces, turns tabs into spaces
 set autoindent          " copy indent from current line when starting a new line
 set smartindent         " even better autoindent (e.g. add indent after '{')
