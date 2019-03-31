@@ -9,6 +9,8 @@ set showmode            " show current mode down the bottom
 filetype plugin on      " enable filetype plugin
 filetype indent on      " enable indent plugin
 set mouse=a             " https://superuser.com/a/826240
+set t_Co=256            " https://stackoverflow.com/a/34455109
+set background=dark
 " Tabs
 set shiftwidth=2        " set a <TAB> key-press equal to X spaces
 set tabstop=2						" number of visual spaces per TAB
