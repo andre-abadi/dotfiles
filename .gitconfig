@@ -1,6 +1,8 @@
 [user]
 	name = dancingborg
 	email = dancingborg@users.noreply.github.com
+[github]
+	user = dancingborg
 [color]
   diff = auto
 	status = auto
@@ -8,3 +10,4 @@
   interactive = auto
 	ui = auto
   pager = true
+
