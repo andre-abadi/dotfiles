@@ -1,3 +1,18 @@
+# system aliases
+alias tmux="tmux attach || tmux"
+# docker aliases
+alias up='docker-compose up -d'
+alias down='docker-compose down'
+alias pull='docker-compose pull'
+cli () { docker exec -it ${PWD##*/} /bin/bash ; }
+logs () { docker logs --follow ${PWD##*/} ; }
+# SSH aliases
+alias osiris="ssh eagle@10.1.1.140"
+alias persephone="ssh -p1339 admin@10.1.1.150"
+alias pihole="ssh pi@10.1.1.200"
+#
+# automatically connect to Tmux if SSH and check for existing sessions
+#
 # https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 # https://stackoverflow.com/a/40192494
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
@@ -122,13 +137,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias up='docker-compose up -d'
-alias down='docker-compose down'
-alias pull='docker-compose pull'
-cli () { docker exec -it ${PWD##*/} /bin/bash ; }
-logs () { docker logs --follow ${PWD##*/} ; }
-alias osiris="ssh eagle@10.1.1.140"
-alias persephone="ssh -p1339 admin@10.1.1.150"
-alias pihole="ssh pi@10.1.1.200"
-alias tmux="tmux attach || tmux"
+#
+# https://superuser.com/a/826240
+#
 export PS1="\n\[$(tput sgr0)\]\[\033[38;5;13m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;13m\]@\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;13m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\]: \[$(tput sgr0)\]\[\033[38;5;11m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]\n[\[$(tput sgr0)\]\[\033[38;5;9m\]\$?\[$(tput sgr0)\]\[\033[38;5;15m\]] \[$(tput sgr0)\]\[\033[38;5;10m\]\T\[$(tput sgr0)\]\[\033[38;5;15m\] \\$ \[$(tput sgr0)\]"
