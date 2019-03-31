@@ -13,12 +13,11 @@ alias osiris="ssh eagle@10.1.1.140"
 alias persephone="ssh -p1339 admin@10.1.1.150"
 alias pihole="ssh pi@10.1.1.200"
 
-if [[ $platform == 'linux' ]]; then
-   alias ls='ls --color=auto'
-elif [[ $platform == 'freebsd' ]]; then
-   alias ls='ls -G'
-fi
-
+# http://f00bar.com/blog/2011/07/09/simple-robust-os-detection-in-bash-using-ostype/
+case "$OSTYPE" in
+  darwin*)  alias ls='ls -G' ;; 
+  linux*)   alias ls='ls --color=auto' ;;
+esac
 
 #
 # automatically connect to Tmux if SSH and check for existing sessions
