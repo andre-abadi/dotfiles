@@ -9,8 +9,8 @@ set showmode            " show current mode down the bottom
 filetype plugin on      " enable filetype plugin
 filetype indent on      " enable indent plugin
 set mouse=a             " https://superuser.com/a/826240
-set t_Co=256            " https://stackoverflow.com/a/34455109
 set background=dark
+
 " Tabs
 set shiftwidth=2        " set a <TAB> key-press equal to X spaces
 set tabstop=2						" number of visual spaces per TAB
@@ -21,10 +21,12 @@ set smartindent         " even better autoindent (e.g. add indent after '{')
 set wrap								" wrap lines
 set lbr									" enable line break
 set tw=80 							" break lines at x characters
+
 " Menus
 set wildmenu						" visual autocomplete for command menu
 set lazyredraw					" redraw only when we need to
 set ttyfast             " speed optimisations
+
 " Searching
 set showmatch						" highlight matching [{()}]
 set ignorecase					" ignore case when searching
@@ -32,11 +34,13 @@ set smartcase						" when searching try to be smart about cases
 set hlsearch						" highlight search results
 set incsearch						" makes search act like search in modern browsers
 set magic								" for regular expressions turn magic on
+
 " Folding
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
 set foldmethod=indent   " fold based on indent level
+
 " File IO
 set history=500					" sets how many lines of history VIM has to remember
 set autoread						" auto read when a file is changed from the outside
