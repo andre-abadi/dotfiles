@@ -1,3 +1,16 @@
+" install vim-plug
+" Source: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" vim-plug plugins
+call plug#begin('~/.vim/plugged')
+Plug 'ambv/black'
+call plug#end()
+
 " Source:  https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 " Source:  https://dougblack.io/words/a-good-vimrc.html
 
