@@ -40,6 +40,7 @@ filetype indent on      " enable indent plugin
 set mouse=a             " https://superuser.com/a/826240
 set background=dark     " set black background
 set nocompatible        " don't emulate Vi's bugs
+set backspace=indent,eol,start " https://stackoverflow.com/a/3534090
 
 " Tabs
 set shiftwidth=2        " set a <TAB> key-press equal to X spaces
