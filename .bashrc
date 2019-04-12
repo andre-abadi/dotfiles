@@ -1,4 +1,4 @@
-. /home/eagle/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+. ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 
 
 # http://matthew-brett.github.io/pydagogue/installing_on_debian.html
