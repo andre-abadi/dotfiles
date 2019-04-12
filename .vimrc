@@ -9,7 +9,15 @@ endif
 " vim-plug plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
+Plug 'w0rp/ale'
 call plug#end()
+
+" configuration of ALE plugin
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black'],
+\   'markdown': ['prettier'],
+\}
 
 " Source:  https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 " Source:  https://dougblack.io/words/a-good-vimrc.html
@@ -33,7 +41,6 @@ set autoindent          " copy indent from current line when starting a new line
 set smartindent         " even better autoindent (e.g. add indent after '{')
 set wrap								" wrap lines
 set lbr									" enable line break
-set tw=80 							" break lines at x characters
 
 " Menus
 set wildmenu						" visual autocomplete for command menu

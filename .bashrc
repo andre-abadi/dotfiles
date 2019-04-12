@@ -1,5 +1,10 @@
+# http://matthew-brett.github.io/pydagogue/installing_on_debian.html
+export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
+export PATH=$PY_USER_BIN:$PATH
+
 # system aliases
-alias tmux="tmux attach || tmux"
+# why -2: https://unix.stackexchange.com/a/355391
+alias tmux="tmux -2 attach || tmux -2"
 
 # docker aliases
 alias up='docker-compose up -d'
@@ -27,7 +32,7 @@ esac
 # https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 # https://stackoverflow.com/a/40192494
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-    tmux attach-session -t SSH || tmux new-session -s SSH
+    tmux -2 attach-session -t SSH || tmux -2 new-session -s SSH
 fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
