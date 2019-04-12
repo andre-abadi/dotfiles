@@ -1,4 +1,9 @@
-. ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+# start powerline-status from source depending on OS
+case "$OSTYPE" in
+  darwin*)   . /usr/local/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh ;;
+  linux*)   . ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ;;
+esac
+
 
 
 # http://matthew-brett.github.io/pydagogue/installing_on_debian.html
