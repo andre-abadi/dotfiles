@@ -10,10 +10,6 @@ esac
 export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
 export PATH=$PY_USER_BIN:$PATH
 
-# system aliases
-# why -2: https://unix.stackexchange.com/a/355391
-alias tmux="tmux -2 attach || tmux -2"
-
 # docker aliases
 alias up='docker-compose up -d'
 alias down='docker-compose down'
@@ -42,6 +38,9 @@ esac
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     tmux attach-session -t SSH || tmux new-session -s SSH
 fi
+# why -2: https://unix.stackexchange.com/a/355391
+alias tmux="tmux -2 attach || tmux -2"
+
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
