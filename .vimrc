@@ -35,6 +35,8 @@ filetype indent on      " enable indent plugin
 set mouse=a             " https://superuser.com/a/826240
 set background=dark     " set black background
 set backspace=indent,eol,start " https://stackoverflow.com/a/3534090
+set showtabline=2       " always show the tab line at the top
+set laststatus=2        " status line always on
 
 " Tabs
 set shiftwidth=2        " set a <TAB> key-press equal to X spaces
@@ -75,13 +77,11 @@ set nowb                " turn file backups off
 set noswapfile          " turn file backups off
 
 " powerline-status
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set rtp+={~/.local/lib/python3.6/site-packages/powerline/bindings/vim
-set showtabline=2
-set laststatus=2        " status line always on
-set noshowmode          " must go at the end of the .vimrc file
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
+"set rtp+={~/.local/lib/python3.6/site-packages/powerline/bindings/vim
+"set noshowmode          " must go at the end of the .vimrc file
                         " https://superuser.com/a/450408
 
 
