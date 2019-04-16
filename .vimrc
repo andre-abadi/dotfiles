@@ -13,6 +13,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
 Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " configuration of ALE plugin
