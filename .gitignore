@@ -8,6 +8,8 @@
 !.bashrc
 !.README
 !/.config
+!/.config/alacritty/alacritty.yml
+!/.config/htop/htoprc
 !/.tmux.conf
 !/.tmux.conf.local
 !.colour-check.sh
