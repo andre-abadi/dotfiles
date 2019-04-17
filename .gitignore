@@ -9,4 +9,5 @@
 !.README
 !/.config
 !/.tmux.conf
+!/.tmux.conf.local
 !.colour-check.sh
