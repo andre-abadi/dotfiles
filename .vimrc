@@ -21,13 +21,17 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black'],
 \   'markdown': ['prettier'],
+\   'css': ['prettier'],
+\   'html': ['prettier'],
 \}
+let g:ale_fix_on_save = 1
+
 
 " Source:  https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 " Source:  https://dougblack.io/words/a-good-vimrc.html
 
 " App
-set laststatus=2    
+set laststatus=2
 syntax enable						" enable syntax processing
 set showcmd             " show incomplete cmds down the bottom
 set showmode            " show current mode down the bottom
@@ -84,5 +88,3 @@ set noswapfile          " turn file backups off
 "set rtp+={~/.local/lib/python3.6/site-packages/powerline/bindings/vim
 "set noshowmode          " must go at the end of the .vimrc file
                         " https://superuser.com/a/450408
-
-
