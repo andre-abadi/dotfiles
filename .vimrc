@@ -1,5 +1,6 @@
 " must be the first setting
-set nocompatible        " don't emulate Vi's bugs
+" don't emulate Vi's bugs
+set nocompatible
 
 " install vim-plug
 " Source: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
@@ -8,15 +9,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
-" vim-plug plugins
+" add vim-plug plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 call plug#end()
-
-" configuration of ALE plugin
+" configuration of vim-plug ALE plugin
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black'],
@@ -25,6 +24,11 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
+
+" https://www.youtube.com/watch?v=XA2WjJbmmoM
+"
+" fuzzy file finder
+set path+=**            "  allow recursive searches within the current project
 
 
 " Source:  https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
@@ -80,11 +84,3 @@ set ffs=unix,dos,mac		" use Unix as the standard file type
 set nobackup            " turn file backups off
 set nowb                " turn file backups off
 set noswapfile          " turn file backups off
-
-" powerline-status
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
-"set rtp+={~/.local/lib/python3.6/site-packages/powerline/bindings/vim
-"set noshowmode          " must go at the end of the .vimrc file
-                        " https://superuser.com/a/450408
