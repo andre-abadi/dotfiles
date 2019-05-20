@@ -22,7 +22,6 @@ logs () { docker logs --follow ${PWD##*/} ; }
 # SSH aliases
 alias osiris="ssh eagle@10.1.1.140"
 alias persephone="ssh -p1339 admin@10.1.1.150"
-alias pi-hole="ssh pi@10.1.1.200"
 
 # http://f00bar.com/blog/2011/07/09/simple-robust-os-detection-in-bash-using-ostype/
 case "$OSTYPE" in
