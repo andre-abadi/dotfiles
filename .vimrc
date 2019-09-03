@@ -9,6 +9,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 " add vim-plug plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
@@ -17,6 +18,7 @@ Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " configuration of vim-plug ALE plugin
+let g:airline#extensions#ale#enabled = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black','reorder-python-imports','trim_whitespace','remove_trailing_lines'],
@@ -25,6 +27,7 @@ let g:ale_fixers = {
 \   'html': ['prettier'],
 \}
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_text_changed="always"
 
 " https://www.youtube.com/watch?v=XA2WjJbmmoM
 "
@@ -36,7 +39,6 @@ set path+=**            "  allow recursive searches within the current project
 " Source:  https://dougblack.io/words/a-good-vimrc.html
 
 " App
-set laststatus=2
 syntax enable		   	" enable syntax processing
 set showcmd             " show incomplete cmds down the bottom
 set showmode            " show current mode down the bottom
