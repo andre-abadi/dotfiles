@@ -52,7 +52,10 @@ window:
   decorations: full
 
   # When true, alacritty starts maximized.
-  start_maximized: false
+  # - Windowed
+  # - Maximized
+  # - Fullscreen
+  startup_mode: Fullscreen
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -153,12 +156,6 @@ font:
   # effect.
   use_thin_strokes: true
 
-# Display the time it takes to redraw each frame.
-render_timer: false
-
-# Keep the log file after quitting Alacritty.
-persistent_logging: false
-
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
@@ -184,11 +181,11 @@ colors:
   #cursor:
   #  text: '0x000000'
   #  cursor: '0xffffff'
-  
+
   # Selection colors
   #
-  # Colors which should be used to draw the selection area. If selection 
-  # background is unset, selection color will be the inverse of the cell colors. 
+  # Colors which should be used to draw the selection area. If selection
+  # background is unset, selection color will be the inverse of the cell colors.
   # If only text is unset the cell text color will remain the same.
   #selection:
   #  text: '0xeaeaea'
