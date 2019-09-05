@@ -25,7 +25,7 @@ alias persephone="ssh -p1339 admin@10.1.1.150"
 
 # http://f00bar.com/blog/2011/07/09/simple-robust-os-detection-in-bash-using-ostype/
 case "$OSTYPE" in
-  darwin*)  alias ls='ls -G' ;; 
+  darwin*)  alias ls='ls -G' ;;
   linux*)   alias ls='ls --color=auto' ;;
 esac
 
@@ -125,7 +125,7 @@ fi
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
