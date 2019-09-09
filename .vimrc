@@ -21,7 +21,7 @@ call plug#end()
 let g:airline#extensions#ale#enabled = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black','reorder-python-imports','trim_whitespace','remove_trailing_lines'],
+\   'python': ['black','trim_whitespace','remove_trailing_lines'],
 \   'markdown': ['prettier'],
 \   'css': ['prettier'],
 \   'html': ['prettier'],
