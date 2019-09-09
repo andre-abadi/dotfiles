@@ -23,6 +23,15 @@ logs () { docker logs --follow ${PWD##*/} ; }
 alias osiris="ssh eagle@10.1.1.140"
 alias persephone="ssh -p1339 admin@10.1.1.150"
 
+# nvidia-smi alias
+alias nvidia-smi="watch -n 1 nvidia-smi"
+
+# some more ls aliases
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+
+
 # http://f00bar.com/blog/2011/07/09/simple-robust-os-detection-in-bash-using-ostype/
 case "$OSTYPE" in
   darwin*)  alias ls='ls -G' ;;
@@ -123,11 +132,6 @@ fi
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alFh'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
