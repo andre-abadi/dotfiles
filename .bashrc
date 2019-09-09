@@ -24,7 +24,7 @@ alias osiris="ssh eagle@10.1.1.140"
 alias persephone="ssh -p1339 admin@10.1.1.150"
 
 # nvidia-smi alias
-alias nvidia-smi="watch -n 1 nvidia-smi"
+alias nvidia="watch -n 1 -c 'gpustat --color && nvidia-smi'"
 
 # some more ls aliases
 alias ll='ls -alFh'
