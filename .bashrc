@@ -15,7 +15,7 @@ alias up='docker-compose up -d'
 alias down='docker-compose down'
 alias pull='docker-compose pull'
 alias build='docker-compose up -d --build'
-alias prune='docker image prune --all && docker volume prune'
+alias prune='docker image prune --all --force && docker volume prune --force'
 cli () { docker exec -it ${PWD##*/} /bin/bash ; }
 logs () { docker logs --follow ${PWD##*/} ; }
 
