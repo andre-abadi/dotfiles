@@ -18,6 +18,8 @@ alias build='docker-compose up -d --build'
 alias prune='docker image prune --all --force && docker volume prune --force'
 cli () { docker exec -it ${PWD##*/} /bin/bash ; }
 logs () { docker logs --follow ${PWD##*/} ; }
+alias upgrade='docker-compose down && docker image prune --all --force &&
+    docker volume prune --force  && docker-compose up -d'
 
 # SSH aliases
 alias osiris="ssh eagle@10.1.1.140"
