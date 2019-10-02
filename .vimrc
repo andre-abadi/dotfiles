@@ -36,6 +36,9 @@ let g:ale_python_pylint_executable = 'python3'
 let g:ale_python_pylint_options = '-m pylint
             \--extension-pkg-whitelist=torch,cv2,numpy
             \--generated-members=numpy.*,torch.*'
+let g:ale_python_black_executable = 'python3'
+let g:ale_python_black_options = '-m black --line-length 80'
+let g:black_linelength = 80
 
 " https://www.youtube.com/watch?v=XA2WjJbmmoM
 "
