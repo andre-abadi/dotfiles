@@ -28,6 +28,14 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed="always"
+let g:ale_python_flake8_executable = 'python3'
+let g:ale_python_flake8_options = '-m flake8'
+let g:ale_python_mypy_executable = 'python3'
+let g:ale_python_mypy_options = '-m mypy'
+let g:ale_python_pylint_executable = 'python3'
+let g:ale_python_pylint_options = '-m pylint
+            \--extension-pkg-whitelist=torch,cv2,numpy
+            \--generated-members=numpy.*,torch.*'
 
 " https://www.youtube.com/watch?v=XA2WjJbmmoM
 "
