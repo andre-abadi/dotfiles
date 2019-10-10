@@ -295,8 +295,14 @@ bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft=
 #set -g status-position top
 
 # shift arrows to switch windows
+#
+# Shift+L/R to Switch Windows
+#
 bind -n S-Left  previous-window
 bind -n S-Right next-window
 # https://til.hashrocket.com/posts/6vz1uo5bxv-move-window-tab-in-tmux
+#
+# Ctrl+B , Shift+L/R = Move Window
+#
 bind-key S-Left swap-window -t -1
 bind-key S-Right swap-window -t +1
