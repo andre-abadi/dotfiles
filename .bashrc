@@ -4,7 +4,8 @@
 #  linux*)   . ~/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh ;;
 #esac
 
-
+# https://www.reddit.com/r/osx/comments/cmm2on/catalina_suppress_zsh_warning/ew3a1hg?utm_source=share&utm_medium=web2x
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # http://matthew-brett.github.io/pydagogue/installing_on_debian.html
 export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
