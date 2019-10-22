@@ -16,15 +16,20 @@ Plug 'ambv/black'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'yggdroot/indentline'
 call plug#end()
 
-" enable indentline plugin
-let g:indentLine_setConceal = 2
 
+" set line number
+set number
+highlight LineNr ctermbg=darkgrey
+highlight LineNr ctermfg=lightgrey
 " setup options for gitgutter
 set signcolumn=yes
 let g:gitgutter_override_sign_column_highlight = 0
 highlight SignColumn ctermbg=darkgrey
+
+
 
 " configuration of vim-plug ALE plugin
 let g:airline#extensions#ale#enabled = 1
@@ -48,11 +53,6 @@ let g:ale_python_pylint_options = '-m pylint
 let g:ale_python_black_executable = 'python3'
 let g:ale_python_black_options = '-m black --line-length 80'
 let g:black_linelength = 80
-
-" https://www.youtube.com/watch?v=XA2WjJbmmoM
-"
-" fuzzy file finder
-set path+=**            "  allow recursive searches within the current project
 
 
 " Source:  https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
