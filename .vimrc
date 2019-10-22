@@ -23,7 +23,7 @@ call plug#end()
 " set line number
 set number
 highlight LineNr ctermbg=darkgrey
-highlight LineNr ctermfg=lightgrey
+highlight LineNr ctermfg=black
 " setup options for gitgutter
 set signcolumn=yes
 let g:gitgutter_override_sign_column_highlight = 0
