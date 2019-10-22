@@ -15,7 +15,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'ambv/black'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
+
+" enable indentline plugin
+let g:indentLine_setConceal = 2
+
+" setup options for gitgutter
+set signcolumn=yes
+let g:gitgutter_override_sign_column_highlight = 0
+highlight SignColumn ctermbg=darkgrey
 
 " configuration of vim-plug ALE plugin
 let g:airline#extensions#ale#enabled = 1
