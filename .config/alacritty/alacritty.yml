@@ -361,6 +361,9 @@ live_config_reload: true
 #  program: /bin/bash
 #  args:
 #    - --login
+# FOR WINDOWS POWERSHELL CORE (6)
+#shell:
+#  program: pwsh
 
 # Startup directory
 #
