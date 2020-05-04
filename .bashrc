@@ -11,6 +11,8 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
 export PATH=$PY_USER_BIN:$PATH
 
+alias motd='cat /run/motd.dynamic'
+
 # docker aliases
 alias up='docker-compose up -d'
 alias down='docker-compose down'
@@ -46,9 +48,9 @@ esac
 #
 # https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 # https://stackoverflow.com/a/40192494
-if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-    tmux attach-session -t SSH || tmux new-session -s SSH
-fi
+#if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+#    tmux attach-session -t SSH || tmux new-session -s SSH
+#fi
 # why -2: https://unix.stackexchange.com/a/355391
 alias tmux="tmux -2 attach || tmux -2"
 
