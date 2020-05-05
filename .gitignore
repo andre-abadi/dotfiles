@@ -1,17 +1,24 @@
-# Ignore everything
+# Ignore
 /*
-# Except the following
+/.config/*
+/.config/yarn
+/.config/Transmission*
+# Except
 !.gitignore
 !.gitconfig
 !.vimrc
 !.bash_profile
 !.bashrc
 !.README
-!/.config
+!/.config/
 !/.config/alacritty/alacritty.yml
 !/.config/htop/htoprc
 !/.tmux.conf
 !/.tmux.conf.local
 !.colour-check.sh
-/.config/yarn
-/.config/Transmission*
+# https://riptutorial.com/git/example/911/exceptions-in-a--gitignore-file
+!.vim/
+.vim/*
+!.vim/autoload/
+./vim/autoload/*
+!/.vim/autoload/plug.vim
