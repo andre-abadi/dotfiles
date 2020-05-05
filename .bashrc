@@ -12,7 +12,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 export PATH=$PY_USER_BIN:$PATH
 
 alias motd='cat /run/motd.dynamic'
-alias livepatch'sudo canonical-livepatch status --verbose'
+alias livepatch='sudo canonical-livepatch status --verbose'
 
 # docker aliases
 alias up='docker-compose up -d'
