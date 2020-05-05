@@ -12,7 +12,6 @@ endif
 
 " add vim-plug plugins
 call plug#begin('~/.vim/plugged')
-Plug 'ambv/black'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
