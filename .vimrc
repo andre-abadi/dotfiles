@@ -68,6 +68,7 @@ set background=dark     " set black background
 set backspace=indent,eol,start " https://stackoverflow.com/a/3534090
 set showtabline=2       " always show the tab line at the top
 set laststatus=2        " status line always on
+set pastetoggle=<F3>    " F3 to not-indent when pasting 
 
 " Tabs
 set shiftwidth=4        " set a <TAB> key-press equal to X spaces
