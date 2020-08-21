@@ -4,6 +4,7 @@
 /.config/yarn
 /.config/Transmission*
 # Except
+!/.oh-my-zsh/*
 !.gitignore
 !.gitconfig
 !.vimrc
