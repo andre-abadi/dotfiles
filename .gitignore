@@ -4,6 +4,7 @@
 /.config/yarn
 /.config/Transmission*
 # Except
+!.aliases
 !/.oh-my-zsh
 !/.oh-my-zsh/**
 !/.zshrc

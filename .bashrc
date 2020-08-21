@@ -11,32 +11,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 #export PY_USER_BIN=$(python -c 'import site; print(site.USER_BASE + "/bin")')
 export PATH=$PY_USER_BIN:$PATH
 
-alias motd='cat /run/motd.dynamic'
-alias livepatch='sudo canonical-livepatch status --verbose'
-
-# docker aliases
-alias up='docker-compose up -d'
-alias down='docker-compose down'
-alias pull='docker-compose pull'
-alias build='docker-compose up -d --build'
-alias prune='docker image prune --all --force && docker volume prune --force'
-cli () { docker exec -it ${PWD##*/} /bin/bash ; }
-logs () { docker logs --follow ${PWD##*/} ; }
-alias upgrade='docker-compose down && docker image prune --all --force &&
-    docker volume prune --force  && docker-compose up -d'
-
-# SSH aliases
-alias osiris="ssh eagle@10.1.1.140"
-alias persephone="ssh -p1339 admin@10.1.1.150"
-
-# nvidia-smi alias
-alias nvidia="watch -n 1 -c 'gpustat --color && nvidia-smi'"
-
-# some more ls aliases
-alias ll='ls -alFh'
-alias la='ls -A'
-alias l='ls -CF'
-
+if [ -f ~/.aliases ]; then
+   . ~/.aliases
+fi
 
 # http://f00bar.com/blog/2011/07/09/simple-robust-os-detection-in-bash-using-ostype/
 case "$OSTYPE" in

@@ -1,0 +1,25 @@
+# aliases for BASH and ZSH
+#
+# https://apple.stackexchange.com/a/371868
+
+alias motd='cat /run/motd.dynamic'
+alias livepatch='sudo canonical-livepatch status --verbose'
+
+# docker aliases
+alias up='docker-compose up -d'
+alias down='docker-compose down'
+alias pull='docker-compose pull'
+alias build='docker-compose up -d --build'
+alias prune='docker image prune --all --force && docker volume prune --force'
+cli () { docker exec -it ${PWD##*/} /bin/bash ; }
+logs () { docker logs --follow ${PWD##*/} ; }
+alias upgrade='docker-compose down && docker image prune --all --force &&
+    docker volume prune --force  && docker-compose up -d'
+
+# nvidia-smi alias
+alias nvidia="watch -n 1 -c 'gpustat --color && nvidia-smi'"
+
+# some more ls aliases
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
