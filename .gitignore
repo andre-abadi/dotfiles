@@ -12,7 +12,8 @@
 !.README
 !/.config/
 !/.config/alacritty/alacritty.yml
-!/.tmux.conf
+!/.tmux/*
+!/.tmux
 !/.tmux.conf.local
 !.colour-check.sh
 # https://riptutorial.com/git/example/911/exceptions-in-a--gitignore-file
