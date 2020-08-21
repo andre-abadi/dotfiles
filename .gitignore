@@ -5,6 +5,8 @@
 /.config/Transmission*
 # Except
 !/.oh-my-zsh/*
+!/.zshrc
+!/.p10k.zsh
 !.gitignore
 !.gitconfig
 !.vimrc
