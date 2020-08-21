@@ -18,6 +18,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'yggdroot/indentline'
 call plug#end()
 
+" modify tabs for YAML files
+" https://stackoverflow.com/a/37488992
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 
 " set line number
 set number
@@ -68,7 +72,7 @@ set background=dark     " set black background
 set backspace=indent,eol,start " https://stackoverflow.com/a/3534090
 set showtabline=2       " always show the tab line at the top
 set laststatus=2        " status line always on
-set pastetoggle=<F3>    " F3 to not-indent when pasting 
+set pastetoggle=<F3>    " F3 to not-indent when pasting
 
 " Tabs
 set shiftwidth=4        " set a <TAB> key-press equal to X spaces
