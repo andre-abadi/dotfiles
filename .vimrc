@@ -66,7 +66,7 @@ syntax enable		   	" enable syntax processing
 set showcmd             " show incomplete cmds down the bottom
 set showmode            " show current mode down the bottom
 filetype plugin on      " enable filetype plugin
-filetype indent on      " enable indent plugin
+"filetype indent on      " enable indent plugin
 set mouse=a             " https://superuser.com/a/826240
 set background=dark     " set black background
 set backspace=indent,eol,start " https://stackoverflow.com/a/3534090
@@ -78,7 +78,7 @@ set pastetoggle=<F3>    " F3 to not-indent when pasting
 set shiftwidth=4        " set a <TAB> key-press equal to X spaces
 set tabstop=4			" number of visual spaces per TAB
 set softtabstop=4	    " number of spaces in tab when editing
-set textwidth=79        " PEP8 max line length
+"set textwidth=79        " PEP8 max line length
 set expandtab			" tabs are spaces, turns tabs into spaces
 set autoindent          " copy indent from current line when starting a new line
 set smartindent         " even better autoindent (e.g. add indent after '{')
