@@ -15,7 +15,7 @@ cli () { docker exec -it ${PWD##*/} /bin/bash ; }
 logs () { docker logs --follow ${PWD##*/} ; }
 alias upgrade='docker-compose down && docker image prune --all --force &&
     docker volume prune --force  && docker-compose up -d'
-alias rebootarr='docker restart radarr-preview sonarr-preview transmission sabnzbd jackett tautulli'
+alias rebootarr='docker restart radarr-preview sonarr-preview transmission sabnzbd jackett tautulli unifi-video jellyfin calibre-web'
 
 # nvidia-smi alias
 alias nvidia="watch -n 1 -c 'gpustat --color && nvidia-smi'"
