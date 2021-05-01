@@ -40,6 +40,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+alias apt-upgrade="sudo apt update && sudo apt full-upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"
+
 # http://f00bar.com/blog/2011/07/09/simple-robust-os-detection-in-bash-using-ostype/
 case "$OSTYPE" in
   darwin*)  alias ls='ls -G' ;;
